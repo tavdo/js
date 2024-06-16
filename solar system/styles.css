@@ -11,6 +11,8 @@ body {
 
 /* Ensure the page takes up the full width and height */
 body, html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     margin: 0;
     padding: 0;
     width: 100%;
@@ -18,6 +20,9 @@ body, html {
     overflow: hidden; /* Prevent scrolling by the browser default */
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
+    background-color: black; /* Fallback background color */
+    background: url('back.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* Enable scroll within the sections */
@@ -26,6 +31,9 @@ body, html {
     width: 100%;
     overflow-y: auto; /* Enable vertical scrolling */
     scroll-behavior: smooth;
+    position: relative;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    overscroll-behavior: contain; /* Prevent scroll chaining */
 }
 
 nav {
@@ -61,18 +69,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-#background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    width: 900px;
-    height: 900px;
-    z-index: -1;
-    background-size: cover;
-}
-
 .section {
     position: relative;
     height: 100vh;
@@ -91,7 +87,7 @@ nav ul li a:hover {
 
 .planet-container {
     background-color: #000000a9;
-    backdrop-filter: 5px;
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
