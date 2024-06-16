@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Hide scrollbar for Chrome, Safari, and Opera */
 body::-webkit-scrollbar {
     display: none;
@@ -5,14 +7,8 @@ body::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge, and Firefox */
 body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-/* Ensure the page takes up the full width and height */
-body, html {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     margin: 0;
     padding: 0;
     width: 100%;
@@ -85,23 +81,11 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-.planet-container {
-    background-color: #000000a9;
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.planet {
-    flex: 1 1 calc(12.5% - 10px); /* Adjusting the width to fit 8 planets in one row with gap */
-    max-width: calc(12.5% - 10px);
-}
-
-.planet video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+/* New CSS for handling planet images */
+.planet-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Optional: Makes images circular */
+    object-fit: cover; /* Ensures the image covers the entire space */
+    border: 2px solid white; /* Optional: Adds a border around the image */
 }
