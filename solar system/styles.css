@@ -17,7 +17,7 @@ body {
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
     background-color: black; /* Fallback background color */
-    background: url('back.jpg') no-repeat center center fixed;
+    background: url('./assets/back.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -36,8 +36,8 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.451);
+    backdrop-filter: 5px;
     z-index: 1000;
 }
 
@@ -91,7 +91,8 @@ nav ul li a:hover {
 }
 /* Footer styling */
 footer {
-    background-color: #333;
+    background-color: #33333380;
+    backdrop-filter:5px;
     color: white;
     text-align: center;
     padding: 2px;
@@ -100,6 +101,125 @@ footer {
     width: 100%;
     height: auto;
 }
+.contact-icon {
+  display: inline-block;
+  margin: 10px 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.486);
+  backdrop-filter: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.contact-icon:hover {
+  background-color: #ddd;
+  color: #000;
+}
+.about-creator-box {
+  display: flex;
+  justify-content:center;
+  margin-top: 20px;
+}
+
+.about-creator {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-image: url(box.jpg);
+  background-color: rgba(0, 0, 0, 0.545);
+  backdrop-filter: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: justify;
+}
+
+.about-creator:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-creator img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.about-creator p {
+  max-width: 600px;
+  font-size: 1.2em;
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffea01; /* Color of the scrollbar track (background) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffea01; /* Color of the scrollbar handle (thumb) */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffea01; /* Color of the scrollbar handle on hover */
+}
+
+  /* Custom Scrollbar Styles */
+  ::-webkit-scrollbar {
+      width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: #ffea01;
+      border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+      background: #ffea01;
+  }
+
+  /* For Firefox */
+  scrollbar {
+      width: 12px;
+  }
+
+  scrollbar-thumb {
+      background-color: #888;
+      border-radius: 10px;
+  }
+
+  scrollbar-track {
+      background-color: #f1f1f1;
+  }
+
+        /* Content to make scrollbar visible */
+        .content {
+            height: 200vh; /* Make content tall enough to show scrollbar */
+            padding: 20px;
+        }
+  
+
 
 /* Responsive design */
 @media screen and (max-width: 600px) {
@@ -108,63 +228,3 @@ footer {
         text-align: center;
     }
 }
-.contact-icon {
-    display: inline-block;
-    margin: 10px 20px;
-    font-size: 1.2em;
-    text-decoration: none;
-    color: #333;
-    border: 1px solid #ddd;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .contact-icon img {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-  
-  .contact-icon:hover {
-    background-color: #ddd;
-    color: #000;
-  }
-  .about-creator-box {
-    display: flex;
-    justify-content:center;
-    margin-top: 20px;
-  }
-  
-  .about-creator {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    background-image: url(box.jpg);
-    background-color: rgba(0, 0, 0, 0.545);
-    backdrop-filter: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    text-align: justify;
-  }
-  
-  .about-creator:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .about-creator img {
-    width: 200px;
-    height: auto;
-    margin-right: 20px;
-  }
-  
-  .about-creator p {
-    max-width: 600px;
-    font-size: 1.2em;
-  }
